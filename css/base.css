@@ -1,0 +1,113 @@
+body {
+  color:rgb(54, 96, 121);
+  background-color: rgba(164, 214, 255, 0.384);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex; /* Propriedade que disponibiliza a manipulacao flexiva dos objetos */
+  flex-direction: column; /* coloca os objetos na direcao de uma coluna*/
+  justify-content: space-between;
+  align-items: center; /* alinhar itens da pagina ao centro */
+  max-height: 100%; /*maximo que ele pode atingir dentro de altura na tela */
+  min-height: 100vh; /*minimo que ele pode atingir dentro de altura na tela, vh:altura do campo de visao */
+  min-width: 320px; /* minimo de pixeis que o site pode ser responsivo */
+  margin: 20px 40px; 
+  
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+  padding: 16px;
+}
+
+a {
+  color: rgb(54, 96, 121);
+  text-decoration: none;
+}
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid green;
+}
+
+.center {
+  text-align: center;
+}
+
+footer img {
+  width: 40px;
+  height: 40px;
+}
+
+footer a {
+  margin: 30px;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 5px;
+}
+
+.container {
+  padding: 0px 50px;
+}
+
+nav a:hover {
+  color: green;
+}
+
+.logo img {
+  display: block;
+  max-height: 100%;
+  max-width: 400px;
+}
+
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-body label {
+  margin-bottom: 16px;
+}
+
+.form-body label input {
+  /*sempre que for colocar margin no input adicionar display block ou inline-block*/
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  border-radius: 16px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: rgb(54, 96, 121);
+  height: 18px;
+  padding: 2px 8px;
+}
+
+/* Para um caminho com duas classes utilizar exemplo:*/
+.form-body .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-body .buttons button {
+  display: block;
+  margin-bottom: 30px;
+  padding: 6px 16px;
+  border-radius: 8px;
+  border-width: 1.5px;
+  border-color:rgb(54, 96, 121);
+  background-color: white;
+  transition: ease-in-out 0.3s;
+}
+
+.form-body .buttons button:hover {
+  background-color: rgb(54, 96, 121);
+  color: white;
+}
+

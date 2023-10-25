@@ -1,0 +1,54 @@
+body {
+    display: block;
+}
+
+body h1 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+body p {
+    margin-bottom: 30px;
+}
+
+body .img {
+    display: block;
+    margin: 0 auto; /* o margin auto peder para o navegador calcular a distancia e ajustar imagem (como vocë coloca o auto para esquerda e direita, o navegador acaba empurrando a imagem para o centro*/
+}
+
+
+
+body form {
+    display: block;
+    margin: 0 auto;
+}
+
+body form p {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+body .form-body {
+    max-width: 350px;
+    border-radius: 6px;
+    border: 0.5px solid black;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+body .form-body label {
+    width: 100%;
+}
+
+body .form-body label input {
+    width: 94%;
+    
+}
+
+body .form-description {
+    text-align: center;
+}
+
+
