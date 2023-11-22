@@ -4,7 +4,7 @@ $email = $senha = '';
 $erro = '';
 
 // Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Obtém os valores dos campos do formulário
     $email = isset($_POST['email']) ? $_GET['email'] : '';
     $senha = isset($_POST['senha']) ? $_GET['senha'] : '';
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <img src="img/hotel.png" alt="imagem de hotel" />
     </div>
 
-    <form method="post" action="view/inicio.php">
+    <form method="GET" action="view/inicio.php">
       <span class="form-title"> Faça seu login </span>
       <!--adiciona uma legenda ao formulario-->
       <div class="form-body">

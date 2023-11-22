@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recupere os dados do formulário
     $nome = $_POST["nome"];
     $email = $_POST["email"];
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <div class="center logo">
       <img src="../img/hotel.png" alt="logo do hotel" />
     </div>
-    <form method="get" action="../index.php">
+    <form method="POST" action="../index.php">
       <h1>Formulário de inscrição</h1>
 
       <div class="form-container">
