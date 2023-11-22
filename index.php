@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     
     if ($email == 'gabriel.matias84@gmail.com' && $senha == 'ga1234') {
         // Redireciona para a página de início após o login bem-sucedido
-        header('Location: view/inicio.php');
+        header('Location: inicio.php');
         exit();
     } else {
         $erro = 'Email ou senha incorretos. Por favor, tente novamente';
@@ -33,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <div class="center logo">
       <img src="img/hotel.png" alt="imagem de hotel" />
     </div>
-
     <form method="GET" action="view/inicio.php">
       <span class="form-title"> Faça seu login </span>
       <!--adiciona uma legenda ao formulario-->

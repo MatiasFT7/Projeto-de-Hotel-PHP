@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    header("Location: ../index.php");
+    header("Location: ./inicio.php");
     exit();
 }
 ?>
@@ -8,18 +8,18 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Cadastrado com sucesso</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/login.css">
+    <title>Reservado com sucesso</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
                 <div class="center logo">
-                    <img src="img/hotel.png" alt="imagem de hotel">
+                    <img src="../img/hotel.png" alt="imagem de hotel">
                 </div>
 
-        <form method="get" action="../index.php">
-            <span class="form-title">Usuário cadastrado com sucesso!</span>
+        <form method="get" action="./inicio.php">
+            <span class="form-title">Reserva feita com sucesso!</span>
                 <div class="buttons">
                     <button type="submit">Voltar a tela inicial</button>
                 </div>
