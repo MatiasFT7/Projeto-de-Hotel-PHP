@@ -1,3 +1,18 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recupere os dados do formulário
+    $nome = $_POST["nome"];
+    $email = $_POST["email"];
+    $senha = $_POST["Senha"];
+
+    // Faça o que for necessário com os dados (por exemplo, armazená-los em um banco de dados)
+
+    // Redirecione o usuário para uma página de sucesso
+    header("Location: cadastro.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,9 +24,9 @@
 
   <body>
     <div class="center logo">
-      <img src="../img/animais.png" alt="foto de salvar animais" />
+      <img src="../img/hotel.png" alt="logo do hotel" />
     </div>
-    <form method="get" action="../index.html">
+    <form method="post" action="../index.php">
       <h1>Formulário de inscrição</h1>
 
       <div class="form-container">
@@ -27,33 +42,15 @@
             <input type="email" name="email" />
           </label>
           <label>
-            <span>Endereço:</span>
-            <input type="adress" name="Endereço" />
-          </label>
-          <label>
-            <span>Cidade: </span>
-            <input type="city" name="Cidade" />
-          </label>
-          <label>
-            <span>Telefone: </span>
-            <input type="phone" name="Telefone" />
-          </label>
-          <label>
-            <span>Usuário: </span>
-            <input type="user" name="Usuário" />
-          </label>
-          <label>
             <span>Senha: </span>
             <input type="password" name="Senha" />
           </label>
-          <div class="buttons">
+            <div class="buttons">
             <button>Concluir cadastro</button>
           </div>
-        </div>
       </div>
     </form>
     <footer>
-      <img src="../img/LogoIbama.png" alt="logo do ibama" />
     </footer>
   </body>
 </html>

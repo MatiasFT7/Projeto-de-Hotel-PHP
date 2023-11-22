@@ -1,24 +1,24 @@
 <?php
 // Inicializa as variáveis
 $email = $senha = '';
-$mensagemErro = '';
+$erro = '';
 
 // Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtém os valores dos campos do formulário
-    $email = isset($_GET['email']) ? $_GET['email'] : '';
-    $senha = isset($_GET['senha']) ? $_GET['senha'] : '';
+    $email = isset($_POST['email']) ? $_GET['email'] : '';
+    $senha = isset($_POST['senha']) ? $_GET['senha'] : '';
 
-    // Lógica de autenticação simples (substitua isso pela sua lógica real de autenticação)
-    if ($email == 'seu_email@example.com' && $senha == 'sua_senha') {
+    
+    if ($email == 'gabriel.matias84@gmail.com' && $senha == 'ga1234') {
         // Redireciona para a página de início após o login bem-sucedido
-        header('Location: view/inicio.html');
+        header('Location: view/inicio.php');
         exit();
     } else {
-        $mensagemErro = 'Credenciais inválidas. Tente novamente.';
+        $erro = 'Email ou senha incorretos. Por favor, tente novamente';
     }
 }
-?>ß
+?>
 
 <!DOCTYPE html>
 <html>
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
       <img src="img/hotel.png" alt="imagem de hotel" />
     </div>
 
-    <form method="get" action="view/inicio.html">
+    <form method="post" action="view/inicio.php">
       <span class="form-title"> Faça seu login </span>
       <!--adiciona uma legenda ao formulario-->
       <div class="form-body">
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           <a
             title="Clique aqui para se cadastrar"
             class="button-register"
-            href="view/cadastro.html"
+            href="view/cadastro.php"
             target="_blank"
             >Cadastre-se</a>
         </div>
