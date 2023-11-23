@@ -1,18 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recupere os dados do formulário
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $senha = $_POST["Senha"];
-
-    // Faça o que for necessário com os dados (por exemplo, armazená-los em um banco de dados)
-
-    // Redirecione o usuário para uma página de sucesso
-    header("Location: cadastro.php");
-    exit();
-}
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="center logo">
       <img src="../img/hotel.png" alt="logo do hotel" />
     </div>
-    <form method="POST" action="../index.php">
+    <form method="POST" action="../actions/registro.php">
       <h1>Formulário de inscrição</h1>
 
       <div class="form-container">
@@ -35,15 +20,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-body">
           <label>
             <span>Nome: </span>
-            <input type="text" name="nome" />
+            <input type="text" name="nome" require />
           </label>
           <label>
             <span> Email: </span>
-            <input type="email" name="email" />
+            <input type="email" name="email" require />
           </label>
           <label>
             <span>Senha: </span>
-            <input type="password" name="Senha" />
+            <input type="password" name="senha" require />
           </label>
             <div class="buttons">
             <button>Concluir cadastro</button>

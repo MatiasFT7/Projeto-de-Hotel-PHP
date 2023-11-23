@@ -1,23 +1,14 @@
 <?php
 // Inicializa as variáveis
-$email = $senha = '';
+$email = '';
 $erro = '';
 
 // Verifica se o formulário foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+//if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Obtém os valores dos campos do formulário
-    $email = isset($_POST['email']) ? $_GET['email'] : '';
-    $senha = isset($_POST['senha']) ? $_GET['senha'] : '';
-
-    
-    if ($email == 'gabriel.matias84@gmail.com' && $senha == 'ga1234') {
-        // Redireciona para a página de início após o login bem-sucedido
-        header('Location: inicio.php');
-        exit();
-    } else {
-        $erro = 'Email ou senha incorretos. Por favor, tente novamente';
-    }
-}
+    $email = isset($_GET['email']) ? $_GET['email'] : '';
+    $erro = isset($_GET['erro']) ? $_GET['erro'] : '';
+//}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +24,18 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <div class="center logo">
       <img src="img/hotel.png" alt="imagem de hotel" />
     </div>
-    <form method="GET" action="view/inicio.php">
+    <?php  if (isset($erro) && !empty($erro)) { ?>
+      <p style="
+    color: red;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+">  <?php  echo($erro) ?> </p>   
+
+    <?php } ?>  
+
+    <form method="post" action="actions/login.php">
       <span class="form-title"> Faça seu login </span>
       <!--adiciona uma legenda ao formulario-->
       <div class="form-body">
@@ -41,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
           <!-- adiciona acessibilidade para input/ seu rotulo -->
           <span>E-mail:</span>
           <!-- Adiciona input de email-->
-          <input type="email" name="email" />
+          <input type="email" name="email" require value="<?php  echo($email) ?>"  />
         </label>
         <label>
           <span> Senha:</span>

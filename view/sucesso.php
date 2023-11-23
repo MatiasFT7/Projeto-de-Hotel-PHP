@@ -1,10 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    header("Location: ./inicio.php");
-    exit();
-}
-?>
-
 <html>
 <head>
     <meta charset="UTF-8">
